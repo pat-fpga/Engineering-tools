@@ -385,11 +385,48 @@ https://gitlab.gnome.org/GNOME/meld/-/tree/main/
 === Matlab
 Matlab is an extremely powerful math modeling tool.  It has very nice libraries of advanced functions that can easily be called from a matlab script.  Although Matlab is prohibitavly expensive for me to use outside of work it is available for purchase as a student at a reasonable rate. 
 
+Matlab likes to work on arrays and matrices; where a matrice is a multidimensional array.  The scripts that Matlab likes are called M-Files.  All commands that can be run in the terminal can be used in an M-File scripts.  This combined with normal scripting constructs like conditionals and loops creates a powerful tool.  
+
+Matlab has really good graphing that is easy to create.  This helps tremendously when trying to visualize data.  It also is easy to import and export data to files.  Matlab has Toolboxes that contain advanced functions that can be called from your scripts.
+
+Below is a sample M-File script that demonstrates some of the features in Matlab.
+
+[source, Matlab]
+----
+%Create Simple array of know values
+
+a = [ 1,10,100,1000]
+
+%Create a 3x3 array
+
+b = [1,2,3; 4,5,6; 7,8,9]
+
+%Create an array of evenly spaced interval
+
+c = linspace(0, 8*3.1415927)
+
+%Create a simple plot 
+
+plot(a)
+
+%Do some fun array math
+
+d = 500*cos(c)
+e = c/3.1415927
+
+plot(e,d)
+
+----
+
 https://www.mathworks.com/products/matlab/student.html
 
 [[scilab, SciLab]]
 === SciLab
-Scilab is a free Matlab like tool.  This has the same basic functionality as <<matlab>>, but is missing the advance function libraries that are available in <<matlab>>.  So most simple matlab scripts will just run in this tool.
+Scilab is a free Matlab like tool.  This has the same basic functionality as <<matlab>>, but is missing the advance function libraries that are available in <<matlab>>.  So most simple matlab scripts will just run in this tool after a conversion with the mfile2sci(path) command.
+
+Here is the graphix output from the M-File script listed in the <<matlab>> secion.
+.SciLab M-file demo graph
+image::sci_lab_graph.png[]
 
 https://www.scilab.org/
 
