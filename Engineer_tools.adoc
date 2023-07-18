@@ -425,6 +425,7 @@ https://www.mathworks.com/products/matlab/student.html
 Scilab is a free Matlab like tool.  This has the same basic functionality as <<matlab>>, but is missing the advance function libraries that are available in <<matlab>>.  So most simple matlab scripts will just run in this tool after a conversion with the mfile2sci(path) command.
 
 Here is the graphix output from the M-File script listed in the <<matlab>> secion.
+
 .SciLab M-file demo graph
 image::sci_lab_graph.png[]
 
