@@ -414,6 +414,7 @@ plot(a)
 d = 500*cos(c)
 e = c/3.1415927
 
+%add to the plot
 plot(e,d)
 
 ----
@@ -422,7 +423,7 @@ https://www.mathworks.com/products/matlab/student.html
 
 [[scilab, SciLab]]
 === SciLab
-Scilab is a free Matlab like tool.  This has the same basic functionality as <<matlab>>, but is missing the advance function libraries that are available in <<matlab>>.  So most simple matlab scripts will just run in this tool after a conversion with the mfile2sci(path) command.
+Scilab is a free Matlab like tool.  This has the same basic functionality as <<matlab>>, but is missing the advance function libraries that are available in <<matlab>>.  So most simple matlab scripts will just run in this tool after a conversion with the mfile2sci(path_to_M-File) command.
 
 Here is the graphix output from the M-File script listed in the <<matlab>> secion.
 
@@ -495,7 +496,7 @@ Anaconda is a packaged version of Python that will help setup your environment. 
 
 https://www.anaconda.com/
 
-Python has even been ported to many 32bit microcontrollers:
+Python has even been ported to many 32bit microcontrollers and is gaining support in the Aurduino ecosystem:
 
 https://micropython.org/
 
@@ -504,6 +505,12 @@ https://circuitpython.org/
 [[cpp, C or C++]]
 == C or C++
 C is a basic language that is much closer to assembly language than <<python>>.  This ussully means the execution will be faster when your app is developed in C.  C is the base language that defines mostof the syntax used.  C++ is an extention that allows object oriented programming through classes that can be inherited from.  <<arduino>> uses a subset of c that is easier for beginners.  In non <<arduino>> apps the entry point is a function called main. 
+
+Complex datatypes are avalale in C/C\++.  These include arrays, character strings, structures, unions, and classes.  Arrays are a list of the datatype the array is defined with.  Arrays elements can be addressed by using an index to point to the element of interest.  Character strings are essentially arrays of characters elements that are terminated by a NULL character, 0x00.  This allows the programmer to allocate a maximum space, but only use a subset of that space for the string data when it is shorter than the maximum.  Structures allows a grouping of many types of data together.  This is helpful if there is a relation between the different data elements stored in a struct.  Unions are similare to a structure except that all ellements share the same memeory.  This ais a clever way that a single memory location to be treated as an integer byte or a character byte in your program.  Classes were added to allow C++ object orianted design.  They can be thought of as a strcture with the addition of functions that use the data.  
+
+One of the major strengths of C/C++ is the ability to use pointers.  Pointers are variables that point to a place in system memoory. Pointers have a datatype associated with it to tell the compiler how to treat the memory element.  Pointers are declared much like regular variables only pointers have a '*' character before the variable name.  Extreme care must be used when working with pointers.  
+
+The primary compiler for c/C++ programs is the GNU GCC compiler.  This is open source and has been ported to nearly every platform you will find.  
 
 The following example asks for the number of terms and then calculates and prints that number of fibincci terms.  
 [source, c]
