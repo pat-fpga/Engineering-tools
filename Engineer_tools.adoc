@@ -119,6 +119,7 @@ This is a list of tools I was able to list in short order.  Please note that thi
 [[notepad_pp, Notepad++]]
 === Notepad++
 This is a windows based text editor with some nice features like:
+
 * Code Highlighting (color coded text based on type of file)
 * Block mode selection
 * Enhanced search and replace
@@ -140,7 +141,7 @@ https://wiki.gnome.org/Apps/Gedit
 
 [[nano, Nano]]
 === Nano
-Linux terminal text editor.  This editor is an easy to use basic text editor.  This can be used when a graphical envoronment is nat available, and is simple and intiutive to use.  You navigate your text file with the arrow keys, when you are ready to save type [CTRL-O], to exit type [CTRL-X].
+Linux terminal text editor.  This editor is an easy to use basic text editor.  This can be used when a graphical envoronment is not available, and is simple and intiutive to use.  You navigate your text file with the arrow keys, when you are ready to save type [CTRL-O], to exit type [CTRL-X].
 
 https://www.nano-editor.org/
 
@@ -168,7 +169,7 @@ https://www.eclipse.org/home/
 
 [[vscode, Visual Studio Code]]
 === Visual Studio Code
-Visual Studio is a free IDE from Microsoft for software development similar to <<eclipse>>.  
+Visual Studio is a free IDE from Microsoft for software development similar to <<eclipse>>.  This editor is well supported with many extensions.  For examplle I am using the Asciidoctor extension to write this document.  PlatformIO gives you the ability to develop micocontrollers in this nice to use environment.
 
 https://visualstudio.microsoft.com/
 
@@ -189,14 +190,13 @@ https://www.spyder-ide.org/
 [[arduino, Arduino IDE]]
 === Arduino IDE
 Simple code editor for microcontrollers.
-Arduino is a free IDE that works with simple microcontrollers. This is an open source project that was designed to make using microcontrollers easy for gradeschoolers.  Because of this we have a powerfull tool that is very easy to use.  Arduino uses a simplified version of c that has two basic functions: setup() and loop() in every sketch.
+Arduino is a free IDE that works with simple microcontrollers. This is an open source project that was designed to make using microcontrollers easy for gradeschoolers.  Because of this we have a powerfull tool that is very easy to use.  Arduino uses a simplified version of c that has two basic functions: setup() and loop() in every sketch.  Setup is run once at the start. Loop runs over and over again after setup is complete.
 
 There is support for most microntrollers and the examples library has almost any type of sensor or device your would want to use.  This is a great way to see something work before incorporating it in your design.  
 
-Code available for most sensors actuators
-Arduino uses two functions in every program: setup and loop. Setup is run once at the start. Loop runs over and over again after setup is complete.
+Code is available for most sensors actuators.  This means there is an example for almost anything you want to do and this is alll availble in the IDE under Examples menu.
 
-Here is a simple example program:
+Here is a simple example sketch:
 
 [source, c]
 ----
@@ -385,7 +385,7 @@ https://gitlab.gnome.org/GNOME/meld/-/tree/main/
 === Matlab
 Matlab is an extremely powerful math modeling tool.  It has very nice libraries of advanced functions that can easily be called from a matlab script.  Although Matlab is prohibitavly expensive for me to use outside of work it is available for purchase as a student at a reasonable rate. 
 
-Matlab likes to work on arrays and matrices; where a matrice is a multidimensional array.  The scripts that Matlab likes are called M-Files.  All commands that can be run in the terminal can be used in an M-File scripts.  This combined with normal scripting constructs like conditionals and loops creates a powerful tool.  
+Matlab likes to work on arrays and matrices; where a matrice is a multidimensional array.  Matlab defaults to a C double datatype for floating point numbers.  The scripts that Matlab likes are called M-Files.  All commands that can be run in the terminal can be used in an M-File scripts.  This combined with normal scripting constructs like conditionals and loops creates a powerful tool.  
 
 Matlab has really good graphing that is easy to create.  This helps tremendously when trying to visualize data.  It also is easy to import and export data to files.  Matlab has Toolboxes that contain advanced functions that can be called from your scripts.
 
@@ -435,7 +435,7 @@ https://www.scilab.org/
 [[wolframalpha, Wolfram Alpha]]
 === Wolfram Alpha
 
-A website that can solve challenging math problems with explanations.  This is an amazing tool that you can ask wonky questions and it will generate an accurate response more often than not (for math problems).
+A website that can solve challenging math problems with explanations.  This is an amazing tool that you can ask wonky questions and it will generate an accurate response more often than not (for math problems).  I like this tool because it shows the steps used to get to an answer.
 
 https://www.wolframalpha.com/
 
@@ -506,6 +506,58 @@ https://circuitpython.org/
 == C or C++
 C is a basic language that is much closer to assembly language than <<python>>.  This ussully means the execution will be faster when your app is developed in C.  C is the base language that defines mostof the syntax used.  C++ is an extention that allows object oriented programming through classes that can be inherited from.  <<arduino>> uses a subset of c that is easier for beginners.  In non <<arduino>> apps the entry point is a function called main. 
 
+Here is a table of basic datatypes in C.  Here I give the explicit names of the types instead of the general forms like int, short, long, longlong...
+
+[[C_TYPES]]
+.Datatypes in C/C++
+[%autowidth]
+|===
+|Datatype |Size |Notes
+
+|char
+|1 Byte
+|Ascii coded character: https://www.ascii-code.com/
+
+|int8_t
+|1 Byte
+|Signed byte value capable of storing an integer in the range of [-128 - 127]
+
+|uint8_t
+|1 Byte
+|Unsigned byte value capable of storing an integer in the range of [0 - 255]
+
+|int16_t
+|2 Btyes
+|Signed integer capable of storing an integer in the range [-32,768 - 32,767]
+
+|uint16_t
+|2 Bytes
+|Unsigned integer capable of storing an integer in the range [0 - 65,535]
+
+|int32_t
+|4 Btyes
+|Signed integer capable of storing an integer in the range [-2,147,483,648 - 2,147,483,647]
+
+|uint32_t
+|4 Bytes
+|Unsigned integer capable of storing an integer in the range [0 - 4,294,967,295]
+
+|float	
+|4 byte	
+|Floating point number in the range [1.2E-38 to 3.4E+38] with 6 decimal places of precision.  Here we have 1 bit for sign, 8 bits for exponent, and 23 bits for mantissa.
+
+|double	
+|8 byte	
+|Floating point number in the range [2.3E-308 to 1.7E+308] with 6	15 decimal places of precision.  Here we have 1 bit for sign, 11 bits for exponent, and 52 bits for mantissa.
+
+|long double	
+|10 byte	
+|Floating point number in the range [3.4E-4932 to 1.1E+4932] with 6	19 decimal places of precision.  Here we have 1 bit for sign, 15 bits for exponent, and 112 bits for mantissa.
+
+|===
+
+Floating point numbers are special and there are a few things that should be known.  Floating point nummbers in C are in a defined standard from IEEE: IEEE-754.  This define the Most significant bit as the sign bit, Then there is a exponent, and an mantissa.  The mantissa is a fractional numner less than or equal to 1 (without the leading 1); the length of the mantissa determines the precision.  The expoont part can specify a positive of negatve exponent of base 2; the exponent dtermines the range of the floating point number.  Since floating point numbers can have uncertanty, care must be used in comparisons.  I would avoid absolute comarisons A == 3.14159 since this test can fail because of a rounding error.If you need a 'equal' comparison, I would limit the precision of the thing I am comparing and then round the float to the exect precision that is less than the float precision with a known rounding algorythm.
+
 Complex datatypes are avalale in C/C\++.  These include arrays, character strings, structures, unions, and classes.  Arrays are a list of the datatype the array is defined with.  Arrays elements can be addressed by using an index to point to the element of interest.  Character strings are essentially arrays of characters elements that are terminated by a NULL character, 0x00.  This allows the programmer to allocate a maximum space, but only use a subset of that space for the string data when it is shorter than the maximum.  Structures allows a grouping of many types of data together.  This is helpful if there is a relation between the different data elements stored in a struct.  Unions are similare to a structure except that all ellements share the same memeory.  This ais a clever way that a single memory location to be treated as an integer byte or a character byte in your program.  Classes were added to allow C++ object orianted design.  They can be thought of as a strcture with the addition of functions that use the data.  
 
 One of the major strengths of C/C++ is the ability to use pointers.  Pointers are variables that point to a place in system memoory. Pointers have a datatype associated with it to tell the compiler how to treat the memory element.  Pointers are declared much like regular variables only pointers have a '*' character before the variable name.  Extreme care must be used when working with pointers.  
@@ -544,8 +596,6 @@ int main() {
   return 0;
 }
 ----
-
-GNU makes an open source compiler/linker for c called gcc.  This is probably the most widly used tool for software development.
 
 https://gcc.gnu.org/
 
