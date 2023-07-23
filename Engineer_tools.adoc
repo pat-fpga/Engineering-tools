@@ -1,7 +1,7 @@
 = Engineering Tools
 
 == Overview
-This is a list of tools I was able to list in short order.  Please note that this in not complete as new tools are created all the time and I may have missed helpful tools in my haste.
+This is a list of tools I was able to list in short order.  Please note that this in not complete as new tools are created all the time and I may have missed helpful tools in my haste.  Please be patiena as I have wrtten this during my off time.
 
 [[OVERVIEW_TAB]]
 .Tools by Function 
@@ -110,6 +110,8 @@ This is a list of tools I was able to list in short order.  Please note that thi
 
 |<<ubuntu>>
 
+|Security
+|<<bitwarden>>
 
 |===
 
@@ -125,11 +127,18 @@ This is a windows based text editor with some nice features like:
 * Enhanced search and replace
 * Macro record and palyback
 
+.Notepad++ Example`
+image::notepadpp.png[]
+
 https://notepad-plus-plus.org/downloads/
 
 [[kate, Kate]]
 === Kate
 Linux graphical text editor with enhaced features like <<notepad_pp>>.  
+
+.Kate Example`
+image::kate.png[]
+
 
 https://kate-editor.org/
 
@@ -137,11 +146,17 @@ https://kate-editor.org/
 === Gedit
 Linux graphical text editor.  This supports basic features.  
 
+.Gedit Example`
+image::gedit.png[]
+
 https://wiki.gnome.org/Apps/Gedit
 
 [[nano, Nano]]
 === Nano
 Linux terminal text editor.  This editor is an easy to use basic text editor.  This can be used when a graphical envoronment is not available, and is simple and intiutive to use.  You navigate your text file with the arrow keys, when you are ready to save type [CTRL-O], to exit type [CTRL-X].
+
+.Nano Example`
+image::nano.png[]
 
 https://www.nano-editor.org/
 
@@ -156,20 +171,31 @@ Linux terminal and graphical text editor.  This is a very full featured text edi
 * :i Insert text (change to inster mode)
 * :set nu - Turn on lin numbers
 
-For more look here: https://web.mit.edu/merolish/Public/vi-ref.pdf
+.Vim Example`
+image::vim.png[]
+
+For more look command information here: https://web.mit.edu/merolish/Public/vi-ref.pdf
 
 https://www.vim.org/
 
 
 [[eclipse, Eclipse]]
 === Eclipse
-Eclipse it a open source development environment that is used be many software disciplines. This integrated environment allows ful software development including lint (syntax checking) and compiling.  There are many language specific sperspectives that streamline the environment for specific tasks.  Eclipse uses a workbench that contains projects.  This allows you to organize your source files in an easy to use format.  Each project defines how the code will be processed.  This allows you to create an environmnet that know how to build you project and can present a debug view of your code.  https://www.eclipse.org/ide/
+Eclipse it a open source development environment that is used be many software disciplines. This integrated environment allows ful software development including lint (syntax checking) and compiling.  There are many language specific sperspectives that streamline the environment for specific tasks.  Eclipse uses a workbench that contains projects.  Each project contains all the files used to build your project.  This allows you to organize your source files in an easy to use format; it also allows Eclipse to search only your project.  Each project defines how the code will be processed.  This allows you to create an environmnet that know how to build you project and can present a debug view of your code.  
+
+.Eclipse Example`
+image::eclipse.png[]
+
+https://www.eclipse.org/ide/
 
 https://www.eclipse.org/home/
 
 [[vscode, Visual Studio Code]]
 === Visual Studio Code
 Visual Studio is a free IDE from Microsoft for software development similar to <<eclipse>>.  This editor is well supported with many extensions.  For examplle I am using the Asciidoctor extension to write this document.  PlatformIO gives you the ability to develop micocontrollers in this nice to use environment.
+
+.Visual Studio Example`
+image::vscode.png[]
 
 https://visualstudio.microsoft.com/
 
@@ -184,6 +210,9 @@ Sigassi is a tool like <<dvt>> for FPGA development.
 [[spyder, Spyder IDE]]
 === Spyder IDE
 Spyder IDE is a python IDE that helps when develping a Python program.  It has a code editor, python terminal window, a variable viewer and a debugger.  This is included with an Anaconda install.
+
+.Spyder Example
+image::spyder.png[]
 
 https://www.spyder-ide.org/
 
@@ -216,6 +245,9 @@ void loop() {
 }
 ----
 Here you can see how the setup function sets the pin mode once and the loop function turns on and off the output with a 1 second delay.  This example was copied from the blink example that comes with the environment.  You can find this and many more examples by selecting the *File*-> *Examples* menu choice.
+
+.Arduino Example
+image::arduino.png[]
 
 https://www.arduino.cc/
 
@@ -295,6 +327,9 @@ https://wavedrom.com/
 === Gimp
 Image editor tool. Gimp is a powerful bitmap editting tool.  This is like a free version of Adobe Photoshop.  I used gimp to generate the screenshots for this document.
 
+.Gimp Example
+image::gimp.png[]
+
 https://www.gimp.org/
 
 [[inkscape, Inkscape]]
@@ -370,6 +405,9 @@ https://subversion.apache.org/
 === Kdiff3
 Kdiff3 is a tool that works in both Windows and Linux.  It is handy to be able to compare two files.  It is key to understand version in a version control system like <<git>> or <<svn>>.  This can help highlight changes to a file after it is copied before any alterations.  This tool also can compare directories.  If you want you can merge the changes in the files together.  This tool lest you go to each difference and decide if you want A, B or a custom change.
 
+.Kdiff3 Example
+image::kdiff3.png[] 
+
 https://download.kde.org/stable/kdiff3/?C=M;O=D
 
 https://invent.kde.org/sdk/kdiff3
@@ -377,6 +415,9 @@ https://invent.kde.org/sdk/kdiff3
 [[meld, Meld]]
 === Meld
 Meld is a gnu open source compare tool with many of the same features as <<kdiff3>>.  
+
+.Meld example
+image::meld.png[]
 
 https://gitlab.gnome.org/GNOME/meld/-/tree/main/
 
@@ -436,6 +477,9 @@ https://www.scilab.org/
 === Wolfram Alpha
 
 A website that can solve challenging math problems with explanations.  This is an amazing tool that you can ask wonky questions and it will generate an accurate response more often than not (for math problems).  I like this tool because it shows the steps used to get to an answer.
+
+.WolframAlpha Example
+image::wolframapha.png[]
 
 https://www.wolframalpha.com/
 
@@ -659,6 +703,9 @@ https://www.tightvnc.com/
 === PuTTY
 Putty is a serial terminal for windows. This tool allows you to save sessions and easily connect later.  Supports serial and ssh connections. Please note that this tool does support SSH keys, but it stores the keys in a different format.
 
+.Putty Example
+image::putty.png[]
+
 https://www.putty.org/
 
 [[minicom, Minicom]]
@@ -677,6 +724,9 @@ https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/understandi
 [[kicad, Kicad]]
 === Kicad
 Kicad is an open source schematic capture and layout tool for printed circuit boards. This is a free tool that allows you to design a printed circuit board.  You can add new parts to the libray and model them both in the schematic and in the layout.  This means create a picture for the schematic and a footprint for the layout.  The gerber outputs from this tool are acceptable to circuit board fabrication companies.  The cost of creating a PCB has come down to ~$1.00 per board making this tool useful.
+
+.Kicad example
+image::kicad.png[]
 
 https://www.kicad.org/
 
@@ -729,6 +779,9 @@ https://www.microchip.com/en-us/products/fpgas-and-plds/fpga-and-soc-design-tool
 === Audacity
 Audacity is a visual audio editor.  It contains audio filters that are handy.  I like to normalize audio from different sources to have a uniform volume.
 
+.Audacity Screenshot
+image::audacity.png[]
+
 https://www.audacityteam.org/
 
 == Virtualization 
@@ -765,4 +818,12 @@ https://www.byobu.org/
 
 https://ubuntu.com/
 
+== Security
+
+[[bitwarden, Bitwarden]]
+=== Bitwarden
+
+Bitwarden is an open wource tool that can save your passwords.  You will find that you end up having passwords for too many things to keep track of.  I like this tool since it is cross platform and far more secure than a browser or phone OS.
+
+https://bitwarden.com/
 
