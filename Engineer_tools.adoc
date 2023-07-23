@@ -113,6 +113,15 @@ This is a list of tools I was able to list in short order.  Please note that thi
 |Security
 |<<bitwarden>>
 
+.4+|Protocols
+|<<yaml>>
+
+|<<mqqt>>
+
+|<<dns>>
+
+|<<cobs>>
+
 |===
 
 
@@ -826,4 +835,30 @@ https://ubuntu.com/
 Bitwarden is an open wource tool that can save your passwords.  You will find that you end up having passwords for too many things to keep track of.  I like this tool since it is cross platform and far more secure than a browser or phone OS.
 
 https://bitwarden.com/
+
+== Protocols
+
+[[yaml,YAML]]
+=== YAML
+
+YAML is a human readable file format that can be used for configurations.  It is based off of XML that Microsoft uses for many application files.  I like the ease of creating and the complex data structures that are created from the contents of this type of file.  My one complaint is that it uses invisible characters (spaces) in its interpretation of the file.
+
+[[mqqt,MQTT]]
+=== MQTT
+
+MQQT is a simple internet protocol like TCPIP.  The benfit of MQTT is that simple microntrollers have good libraries to talk this protocol.  So you can have a tiny ESP32 like microcontroller that can read a temperature sensor and have it broadcast it over WIFI to redundant data logging computers.  This means you can automate lab tests in a way that can scale up with the complexity.
+
+There are apps for your phone that can talk this protocol.
+
+[[dns,Domain Name Server]]
+=== Domain Name Server
+
+This is what your browser uses to find an internet address for a human readable address (ie. www.google.com => 143.244.220.150).  There are clever tricks that can be used with this tool.  Your computer ussually assumes it is the first DNS server it will check.  That means you can assign addresses to named entities just by editing a simple hosts file.
+
+[[cobs, Consistent Overhead Byte Stuffing]]
+=== Consistent Overhead Byte Stuffing
+
+Consistent Overhead Byte Stuffing can be used in serial communications to detect packet boundaries.  This allows you to know hen a message starts and ends.  The message is altered by replacing all 0x00 bytes with a count to the next 0x00.  The message will alway end with a 0x00 signifying the end of packet.
+
+Simple aprsing can remove the counts and return those bytes to 0x00 when the data is recieved.
 
