@@ -1,5 +1,6 @@
 :quotes.++:
-require 'asciidoctor-diagram'
+
+
 = Engineering Tools
 :toc:
 
