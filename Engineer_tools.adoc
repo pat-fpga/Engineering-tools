@@ -1,5 +1,6 @@
 :quotes.++:
 
+:data-uri:
 
 = Engineering Tools
 :toc:
