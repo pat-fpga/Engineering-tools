@@ -330,6 +330,10 @@ Matlab likes to work on arrays and matrices; where a matrix is a multidimensiona
 
 Matlab has really good graphing that is easy to create.  This helps tremendously when trying to visualize data.  It also is easy to import and export data to files.  Matlab has Toolboxes that contain advanced functions that can be called from your scripts.
 
+If you are interested in learning more about Matlab and are in possesion of a license, then I suggest you use one of their many tutorials like this one:
+
+https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted[https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted]
+
 Below is a sample M-File script that demonstrates some of the features in Matlab.
 
 [source, Matlab]
